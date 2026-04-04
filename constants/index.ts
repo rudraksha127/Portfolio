@@ -257,6 +257,162 @@ export const OTHER_SKILL = [
   },
 ] as const;
 
+export const PROFILE_SECTIONS = [
+  {
+    id: "skills",
+    label: "Skills",
+    title: "Skills",
+    filters: ["All", "Industry Knowledge", "Tools & Technologies"],
+    items: [
+      {
+        title: "Software Development Fundamentals",
+        group: "Industry Knowledge",
+      },
+      {
+        title: "Problem Solving",
+        group: "Industry Knowledge",
+        evidence: "Madhya Pradesh Board of Secondary Education (MPBSE)",
+        evidenceImage: "/logo.png",
+      },
+      {
+        title: "Object-Oriented Programming (OOP)",
+        group: "Industry Knowledge",
+        evidence: "Acropolis Institute of Technology and Research",
+        evidenceImage: "/logo.png",
+      },
+      {
+        title: "Backend Architecture",
+        group: "Industry Knowledge",
+      },
+      {
+        title: "C++",
+        group: "Tools & Technologies",
+      },
+      {
+        title: "SQL",
+        group: "Tools & Technologies",
+      },
+      {
+        title: "Django REST Framework",
+        group: "Tools & Technologies",
+      },
+      {
+        title: "Python (Programming Language)",
+        group: "Tools & Technologies",
+        evidence: "Programming for Everybody (Getting Started with Python)",
+        evidenceImage: "/logo.png",
+      },
+      {
+        title: "Tailwind CSS",
+        group: "Tools & Technologies",
+      },
+      {
+        title: "JavaScript",
+        group: "Tools & Technologies",
+      },
+    ],
+  },
+  {
+    id: "achievements",
+    label: "Achievements",
+    title: "Achievements",
+    filters: ["All", "Academic", "Leadership"],
+    items: [
+      {
+        title: "Higher Secondary (12th) completed with Grade A",
+        group: "Academic",
+      },
+      {
+        title: "High School (10th) completed with distinction",
+        group: "Academic",
+      },
+      {
+        title: "NCC 'A' Certificate",
+        group: "Leadership",
+      },
+    ],
+  },
+  {
+    id: "experience",
+    label: "Experience",
+    title: "Experience",
+    filters: ["All", "Education", "Projects"],
+    items: [
+      {
+        title: "B.Tech IT Student Developer",
+        group: "Education",
+        evidence: "Acropolis Institute of Technology and Research (2024 – 2028)",
+        evidenceImage: "/logo.png",
+      },
+      {
+        title: "Built full-stack portfolio projects with Next.js",
+        group: "Projects",
+      },
+      {
+        title: "Hands-on practice with DSA and problem solving",
+        group: "Education",
+      },
+    ],
+  },
+  {
+    id: "certifications",
+    label: "Certifications",
+    title: "Certifications",
+    filters: ["All", "Technical", "Leadership"],
+    items: [
+      {
+        title: "Programming for Everybody (Getting Started with Python)",
+        group: "Technical",
+        evidenceImage: "/logo.png",
+      },
+      {
+        title: "NCC 'A' Certificate",
+        group: "Leadership",
+      },
+    ],
+  },
+  {
+    id: "expertise",
+    label: "Expertise",
+    title: "Expertise",
+    filters: ["All", "Frontend", "Backend", "Core CS"],
+    items: [
+      {
+        title: "Frontend Development with React, Next.js, and Tailwind CSS",
+        group: "Frontend",
+      },
+      {
+        title: "Backend APIs with Node.js and Django REST Framework",
+        group: "Backend",
+      },
+      {
+        title: "Problem Solving, OOP, and SQL",
+        group: "Core CS",
+      },
+    ],
+  },
+  {
+    id: "projects",
+    label: "Projects",
+    title: "Projects",
+    filters: ["All", "Portfolio", "Web"],
+    items: [
+      {
+        title: "Modern Next.js 14 Portfolio",
+        group: "Portfolio",
+      },
+      {
+        title: "Interactive Cards Portfolio",
+        group: "Portfolio",
+      },
+      {
+        title: "Space Themed Website",
+        group: "Web",
+      },
+    ],
+  },
+] as const;
+
 export const EDUCATION = [
   {
     institute: "Acropolis Institute of Technology and Research",

@@ -5,6 +5,7 @@ import { Education } from "@/components/main/education";
 import { Encryption } from "@/components/main/encryption";
 import { Experience } from "@/components/main/experience";
 import { Hero } from "@/components/main/hero";
+import { ProfileSections } from "@/components/main/profile-sections";
 import { Projects } from "@/components/main/projects";
 import { Skills } from "@/components/main/skills";
 import { Testimonials } from "@/components/main/testimonials";
