@@ -257,6 +257,55 @@ export const OTHER_SKILL = [
   },
 ] as const;
 
+export const EDUCATION = [
+  {
+    institute: "Acropolis Institute of Technology and Research",
+    level: "Bachelor of Technology, Information Technology",
+    duration: "Sep 2024 – Jul 2028",
+    grade: "In Progress",
+    activities: [
+      "Full-Stack Development (MERN, Django)",
+      "Data Structures & Algorithms (DSA)",
+      "Object-Oriented Programming (OOP)",
+      "Real-world Projects & Mini Projects",
+      "Git/GitHub & Version Control",
+      "Coding Practice & Problem Solving",
+    ],
+    summary: "Pursuing B.Tech in Information Technology.",
+    skills: [
+      "Front-End Development",
+      "Back-End Web Development",
+      "Problem Solving",
+    ],
+  },
+  {
+    institute: "Madhya Pradesh Board of Secondary Education (MPBSE)",
+    level: "Higher Secondary (12th), PCM",
+    duration: "Jun 2023 – Apr 2024",
+    grade: "A",
+    activities: [
+      "Physics, Chemistry, Mathematics (PCM)",
+      "Practical Lab Work",
+      "Analytical Thinking & Problem Solving",
+    ],
+    summary: "Completed higher secondary education with a focus on PCM.",
+    skills: ["Problem Solving", "Analytical Skills"],
+  },
+  {
+    institute: "Madhya Pradesh Board of Secondary Education (MPBSE)",
+    level: "High School (10th), General Studies",
+    duration: "Jun 2021 – Apr 2022",
+    grade: "A",
+    activities: [
+      "Academic Excellence",
+      "Science & Mathematics Foundation",
+      "NCC 'A' Certificate",
+    ],
+    summary: "Completed high school with distinction.",
+    skills: ["Presentation Skills"],
+  },
+] as const;
+
 export const PROJECTS = [
   {
     title: "Modern Next.js 14 Portfolio",
@@ -348,6 +397,10 @@ export const NAV_LINKS = [
   {
     title: "About me",
     link: "#about-me",
+  },
+  {
+    title: "Education",
+    link: "#education",
   },
   {
     title: "Skills",
