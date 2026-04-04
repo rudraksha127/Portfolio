@@ -6,12 +6,22 @@ import { FiEdit2 } from "react-icons/fi";
 
 import { PROFILE_SECTIONS } from "@/constants";
 
+type ProfileSection = (typeof PROFILE_SECTIONS)[number];
+type ProfileItem = ProfileSection["items"][number] & {
+  evidence?: string;
+  evidenceImage?: string;
+};
+
 export const ProfileSections = () => {
-  const [activeSectionId, setActiveSectionId] = useState(PROFILE_SECTIONS[0].id);
+  const [activeSectionId, setActiveSectionId] = useState<ProfileSection["id"]>(
+    PROFILE_SECTIONS[0].id
+  );
   const activeSection =
     PROFILE_SECTIONS.find((section) => section.id === activeSectionId) ??
     PROFILE_SECTIONS[0];
-  const [activeFilter, setActiveFilter] = useState(activeSection.filters[0]);
+  const [activeFilter, setActiveFilter] = useState<string>(
+    activeSection.filters[0]
+  );
 
   const filteredItems = useMemo(
     () =>
@@ -78,31 +88,34 @@ export const ProfileSections = () => {
 
         <div className="px-4 md:px-6 pb-6">
           <div className="divide-y divide-[#2A0E61] border-y border-[#2A0E61]">
-            {filteredItems.map((item) => (
+            {filteredItems.map((item) => {
+              const itemData = item as ProfileItem;
+              return (
               <article
                 key={item.title}
                 className="py-5 flex items-start justify-between gap-3"
               >
                 <div className="min-w-0">
                   <h3 className="text-xl font-semibold text-white">{item.title}</h3>
-                  {item.evidence && (
+                  {itemData.evidence && (
                     <div className="mt-3 flex items-start gap-3 text-gray-300">
-                      {item.evidenceImage && (
+                      {itemData.evidenceImage && (
                         <Image
-                          src={item.evidenceImage}
-                          alt={item.evidence}
+                          src={itemData.evidenceImage}
+                          alt={itemData.evidence}
                           width={28}
                           height={28}
                           className="rounded-md object-cover mt-0.5"
                         />
                       )}
-                      <p className="leading-6">{item.evidence}</p>
+                      <p className="leading-6">{itemData.evidence}</p>
                     </div>
                   )}
                 </div>
                 <FiEdit2 className="h-6 w-6 text-gray-300 shrink-0 mt-1" />
               </article>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>
