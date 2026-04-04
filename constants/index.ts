@@ -1,11 +1,13 @@
-import { FaYoutube, FaFacebook } from "react-icons/fa";
+import { FaYoutube, FaFacebook, FaCode } from "react-icons/fa";
 import {
   RxDiscordLogo,
   RxGithubLogo,
   RxInstagramLogo,
   RxTwitterLogo,
   RxLinkedinLogo,
+  RxCode,
 } from "react-icons/rx";
+import { SiLeetcode, SiGeeksforgeeks } from "react-icons/si";
 
 export const SKILL_DATA = [
   {
@@ -100,9 +102,14 @@ export const SOCIALS = [
     link: "https://linkedin.com/in/rudraksh-udiya",
   },
   {
-    name: "Twitter",
-    icon: RxTwitterLogo,
-    link: "https://twitter.com/rudraksha127",
+    name: "LeetCode",
+    icon: SiLeetcode,
+    link: "https://leetcode.com/u/rudra_2007/",
+  },
+  {
+    name: "GeeksforGeeks",
+    icon: SiGeeksforgeeks,
+    link: "https://www.geeksforgeeks.org/profile/rudra2007",
   },
 ] as const;
 
@@ -183,6 +190,18 @@ export const BACKEND_SKILL = [
     height: 80,
   },
   {
+    skill_name: "Java",
+    image: "java.png",
+    width: 70,
+    height: 70,
+  },
+  {
+    skill_name: "Python",
+    image: "python.png",
+    width: 70,
+    height: 70,
+  },
+  {
     skill_name: "MongoDB",
     image: "mongodb.png",
     width: 40,
@@ -254,6 +273,24 @@ export const OTHER_SKILL = [
     image: "go.png",
     width: 60,
     height: 60,
+  },
+  {
+    skill_name: "AWS",
+    image: "aws.png",
+    width: 80,
+    height: 80,
+  },
+  {
+    skill_name: "SAP ABAP",
+    image: "sap.png",
+    width: 70,
+    height: 70,
+  },
+  {
+    skill_name: "Red Hat",
+    image: "redhat.png",
+    width: 70,
+    height: 70,
   },
 ] as const;
 
@@ -584,6 +621,14 @@ export const NAV_LINKS = [
     link: "#skills",
   },
   {
+    title: "Achievements",
+    link: "#achievements",
+  },
+  {
+    title: "Certifications",
+    link: "#certifications",
+  },
+  {
     title: "Projects",
     link: "#projects",
   },
@@ -639,15 +684,147 @@ export const EXPERIENCE = [
 
 export const CERTIFICATIONS = [
   {
-    title: "Full Stack Web Development",
-    issuer: "Self-Taught",
+    title: "AWS Certified Solutions Architect",
+    issuer: "Amazon Web Services",
     date: "2024",
     description:
-      "Comprehensive learning of full-stack web development including frontend, backend, and database technologies.",
+      "Professional certification demonstrating expertise in designing distributed systems on AWS.",
+    icon: "☁️",
+    verified: true,
+    skills: ["AWS", "Cloud Architecture", "System Design"],
+    credentialUrl: "",
+  },
+  {
+    title: "AWS Certified AI Practitioner",
+    issuer: "Amazon Web Services",
+    date: "2024",
+    description:
+      "Certification validating knowledge of AI/ML services and best practices on AWS.",
+    icon: "🤖",
+    verified: true,
+    skills: ["AWS", "Machine Learning", "AI"],
+    credentialUrl: "",
+  },
+  {
+    title: "AWS Certified Cloud Practitioner",
+    issuer: "Amazon Web Services",
+    date: "2024",
+    description:
+      "Foundational certification demonstrating overall understanding of AWS Cloud.",
+    icon: "☁️",
+    verified: true,
+    skills: ["AWS", "Cloud Computing"],
+    credentialUrl: "",
+  },
+  {
+    title: "AWS Certified SysOps Administrator",
+    issuer: "Amazon Web Services",
+    date: "2024",
+    description:
+      "Professional certification for system administrators deploying, managing, and operating on AWS.",
+    icon: "⚙️",
+    verified: true,
+    skills: ["AWS", "System Operations", "DevOps"],
+    credentialUrl: "",
+  },
+  {
+    title: "AWS Certified Developer",
+    issuer: "Amazon Web Services",
+    date: "2024",
+    description:
+      "Professional certification for developing and maintaining AWS-based applications.",
+    icon: "💻",
+    verified: true,
+    skills: ["AWS", "Development", "Cloud Services"],
+    credentialUrl: "",
+  },
+  {
+    title: "SAP Certified - ABAP Development",
+    issuer: "SAP",
+    date: "2024",
+    description:
+      "Professional certification in SAP ABAP programming and development.",
+    icon: "💼",
+    verified: true,
+    skills: ["SAP", "ABAP", "Enterprise Software"],
+    credentialUrl: "",
+  },
+  {
+    title: "SAP Certified - Extended Warehouse Management (EWM)",
+    issuer: "SAP",
+    date: "2024",
+    description:
+      "Certification demonstrating expertise in SAP Extended Warehouse Management solutions.",
+    icon: "📦",
+    verified: true,
+    skills: ["SAP", "EWM", "Warehouse Management"],
+    credentialUrl: "",
+  },
+  {
+    title: "Java SE Certified Professional",
+    issuer: "Oracle",
+    date: "2024",
+    description:
+      "Professional certification demonstrating proficiency in Java Standard Edition programming.",
+    icon: "☕",
+    verified: true,
+    skills: ["Java", "OOP", "Enterprise Development"],
+    credentialUrl: "",
+  },
+  {
+    title: "Red Hat Certified System Administrator",
+    issuer: "Red Hat",
+    date: "2024",
+    description:
+      "Professional certification for Linux system administration using Red Hat Enterprise Linux.",
+    icon: "🐧",
+    verified: true,
+    skills: ["Linux", "Red Hat", "System Administration"],
+    credentialUrl: "",
+  },
+  {
+    title: "Data Structures & Algorithms - Scaler",
+    issuer: "Scaler Academy",
+    date: "2024",
+    description:
+      "Advanced certification in Data Structures and Algorithms from Scaler Academy.",
     icon: "🎓",
     verified: true,
-    skills: ["React", "Node.js", "MongoDB", "TypeScript"],
+    skills: ["DSA", "Problem Solving", "Algorithms"],
     credentialUrl: "",
+  },
+  {
+    title: "Data Structures & Algorithms Certified",
+    issuer: "GeeksforGeeks",
+    date: "2024",
+    description:
+      "Professional certification in Data Structures and Algorithms from GeeksforGeeks.",
+    icon: "💻",
+    verified: true,
+    skills: ["DSA", "Competitive Programming", "Problem Solving"],
+    credentialUrl: "https://www.geeksforgeeks.org/profile/rudra2007",
+  },
+  {
+    title: "LeetCode Problem Solver",
+    issuer: "LeetCode",
+    date: "Ongoing",
+    description:
+      "Active problem solving and competitive programming practice on LeetCode platform.",
+    icon: "🏆",
+    verified: true,
+    skills: ["Algorithms", "Problem Solving", "Coding"],
+    credentialUrl: "https://leetcode.com/u/rudra_2007/",
+  },
+  {
+    title: "GitHub Open Source Contributor",
+    issuer: "GitHub",
+    date: "Ongoing",
+    description:
+      "Active contributions to open source projects and maintaining personal repositories.",
+    icon: "🔧",
+    verified: true,
+    skills: ["Git", "Open Source", "Collaboration"],
+    credentialUrl: "https://github.com/rudraksha127",
   },
   {
     title: "NCC 'A' Certificate",
@@ -658,17 +835,6 @@ export const CERTIFICATIONS = [
     icon: "🏅",
     verified: true,
     skills: ["Leadership", "Teamwork", "Discipline"],
-    credentialUrl: "",
-  },
-  {
-    title: "Data Structures & Algorithms",
-    issuer: "Self-Taught",
-    date: "2024",
-    description:
-      "Ongoing practice and learning of data structures and algorithms through problem-solving platforms.",
-    icon: "💻",
-    verified: true,
-    skills: ["DSA", "Problem Solving", "Algorithms"],
     credentialUrl: "",
   },
 ] as const;
