@@ -262,7 +262,7 @@ export const EDUCATION = [
     institute: "Acropolis Institute of Technology and Research",
     level: "Bachelor of Technology, Information Technology",
     duration: "Sep 2024 – Jul 2028",
-    grade: "Current",
+    grade: "In Progress",
     activities: [
       "Full-Stack Development (MERN, Django)",
       "Data Structures & Algorithms (DSA)",
