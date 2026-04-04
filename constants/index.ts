@@ -90,19 +90,19 @@ export const SKILL_DATA = [
 
 export const SOCIALS = [
   {
-    name: "Instagram",
-    icon: RxInstagramLogo,
-    link: "https://instagram.com",
+    name: "GitHub",
+    icon: RxGithubLogo,
+    link: "https://github.com/rudraksha127",
   },
   {
-    name: "Facebook",
-    icon: FaFacebook,
-    link: "https://facebook.com",
+    name: "LinkedIn",
+    icon: RxLinkedinLogo,
+    link: "https://linkedin.com/in/rudraksh-udiya",
   },
   {
     name: "Twitter",
     icon: RxTwitterLogo,
-    link: "https://twitter.com",
+    link: "https://twitter.com/rudraksha127",
   },
 ] as const;
 
@@ -308,23 +308,44 @@ export const EDUCATION = [
 
 export const PROJECTS = [
   {
-    title: "Modern Next.js 14 Portfolio",
+    title: "Space Portfolio Website",
     description:
-      'Embark on a journey through my professional evolution with the "Modern Next.js Portfolio" - a dynamic showcase of my skills, experiences, and passion for web development. Crafted with precision and powered by Next.js, this portfolio is more than just a static display; it\'s an immersive experience that reflects the cutting edge of modern web technologies.',
+      "A modern, interactive portfolio website featuring stunning 3D animations, space-themed design, and smooth transitions. Built with Next.js 16, React 19, and Framer Motion for an immersive user experience.",
     image: "/projects/project-1.png",
-    link: "https://github.com/rudraksha127",
+    link: "https://github.com/rudraksha127/Portfolio",
   },
   {
-    title: "Interactive Cards Portfolio",
+    title: "Full Stack E-Commerce Platform",
     description:
-      'Step into the extraordinary world of my professional journey through the "Interactive Cards Portfolio" - an innovative and visually captivating platform that redefines the traditional portfolio experience. Ditching the conventional static layout, this portfolio leverages interactive cards to showcase my skills, projects, and personality in an engaging and dynamic manner.',
+      "Complete e-commerce solution with user authentication, product management, shopping cart, and payment integration. Features include admin dashboard, order tracking, and real-time inventory updates.",
     image: "/projects/project-2.png",
     link: "https://github.com/rudraksha127",
   },
   {
-    title: "Space Themed Website",
+    title: "Task Management Application",
     description:
-      'Embark on an interstellar journey with my "Space Themed Website", a mesmerizing space-themed website that invites you to explore the cosmic wonders beyond our world. Immerse yourself in an awe-inspiring digital experience that blends cutting-edge design with the mysteries of the universe.',
+      "Collaborative task management tool with drag-and-drop functionality, real-time updates, team collaboration features, and deadline tracking. Built using React, Node.js, and MongoDB.",
+    image: "/projects/project-3.png",
+    link: "https://github.com/rudraksha127",
+  },
+  {
+    title: "Weather Forecast App",
+    description:
+      "Real-time weather application providing accurate forecasts, interactive maps, and location-based weather alerts. Integrates with multiple weather APIs for comprehensive data coverage.",
+    image: "/projects/project-1.png",
+    link: "https://github.com/rudraksha127",
+  },
+  {
+    title: "Social Media Dashboard",
+    description:
+      "Analytics dashboard for social media management with data visualization, post scheduling, engagement tracking, and multi-platform support. Features beautiful charts and real-time metrics.",
+    image: "/projects/project-2.png",
+    link: "https://github.com/rudraksha127",
+  },
+  {
+    title: "Blog Platform with CMS",
+    description:
+      "Full-featured blogging platform with markdown support, SEO optimization, comment system, and custom CMS. Includes author profiles, categories, tags, and search functionality.",
     image: "/projects/project-3.png",
     link: "https://github.com/rudraksha127",
   },
@@ -395,12 +416,12 @@ export const FOOTER_DATA = [
 
 export const NAV_LINKS = [
   {
-    title: "About me",
+    title: "About",
     link: "#about-me",
   },
   {
-    title: "Education",
-    link: "#education",
+    title: "Experience",
+    link: "#experience",
   },
   {
     title: "Skills",
@@ -410,8 +431,105 @@ export const NAV_LINKS = [
     title: "Projects",
     link: "#projects",
   },
+  {
+    title: "Contact",
+    link: "#contact",
+  },
 ] as const;
 
 export const LINKS = {
   sourceCode: "https://github.com/rudraksha127/Portfolio",
 };
+
+export const EXPERIENCE = [
+  {
+    company: "Open Source Contributor",
+    role: "Full Stack Developer",
+    location: "Remote",
+    duration: "2024 - Present",
+    description:
+      "Contributing to open source projects and building personal projects to enhance skills in modern web development technologies.",
+    achievements: [
+      "Built multiple full-stack applications using Next.js and React",
+      "Implemented responsive designs with Tailwind CSS",
+      "Developed RESTful APIs with Node.js and Express",
+      "Integrated databases including MongoDB and PostgreSQL",
+    ],
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "MongoDB",
+      "Tailwind CSS",
+    ],
+  },
+  {
+    company: "Personal Projects",
+    role: "Web Developer",
+    location: "Indore, India",
+    duration: "2023 - 2024",
+    description:
+      "Developed various web applications and learned modern development practices while building a strong foundation in programming.",
+    achievements: [
+      "Created 10+ web projects showcasing different technologies",
+      "Learned and implemented modern JavaScript frameworks",
+      "Built portfolio websites with 3D animations and effects",
+      "Practiced data structures and algorithms regularly",
+    ],
+    technologies: ["HTML", "CSS", "JavaScript", "React", "Git"],
+  },
+] as const;
+
+export const CERTIFICATIONS = [
+  {
+    title: "Full Stack Web Development",
+    issuer: "Self-Taught",
+    date: "2024",
+    description:
+      "Comprehensive learning of full-stack web development including frontend, backend, and database technologies.",
+    icon: "🎓",
+    verified: true,
+    skills: ["React", "Node.js", "MongoDB", "TypeScript"],
+    credentialUrl: "",
+  },
+  {
+    title: "NCC 'A' Certificate",
+    issuer: "National Cadet Corps",
+    date: "2022",
+    description:
+      "Completed NCC training demonstrating leadership, discipline, and teamwork skills.",
+    icon: "🏅",
+    verified: true,
+    skills: ["Leadership", "Teamwork", "Discipline"],
+    credentialUrl: "",
+  },
+  {
+    title: "Data Structures & Algorithms",
+    issuer: "Self-Taught",
+    date: "2024",
+    description:
+      "Ongoing practice and learning of data structures and algorithms through problem-solving platforms.",
+    icon: "💻",
+    verified: true,
+    skills: ["DSA", "Problem Solving", "Algorithms"],
+    credentialUrl: "",
+  },
+] as const;
+
+export const TESTIMONIALS = [
+  {
+    name: "Future Client",
+    role: "Project Lead",
+    company: "Tech Company",
+    text: "Looking forward to working with talented developers who are passionate about creating exceptional web experiences.",
+    rating: 5,
+  },
+  {
+    name: "Peer Developer",
+    role: "Full Stack Developer",
+    company: "Development Team",
+    text: "Collaboration with skilled developers always leads to amazing results and continuous learning.",
+    rating: 5,
+  },
+] as const;
