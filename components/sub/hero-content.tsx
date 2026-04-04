@@ -50,15 +50,30 @@ export const HeroContent = () => {
           projects and skills.
         </motion.p>
 
-        <motion.a
+        <motion.div
           variants={slideInFromLeft(1)}
-          href="https://github.com/rudraksha127"
-          target="_blank"
-          rel="noreferrer noopener"
-          className="py-2 button-primary text-center text-white cursor-pointer rounded-lg max-w-[200px]"
+          className="flex flex-wrap gap-4"
         >
-          Learn more
-        </motion.a>
+          <a
+            href="#contact"
+            className="py-3 px-6 button-primary text-center text-white cursor-pointer rounded-lg font-semibold hover:scale-105 transition-transform"
+          >
+            Get In Touch
+          </a>
+          <a
+            href="#projects"
+            className="py-3 px-6 bg-transparent border-2 border-purple-500 text-center text-white cursor-pointer rounded-lg font-semibold hover:bg-purple-500/20 transition"
+          >
+            View Projects
+          </a>
+          <a
+            href="/resume.pdf"
+            download
+            className="py-3 px-6 bg-transparent border-2 border-cyan-500 text-center text-white cursor-pointer rounded-lg font-semibold hover:bg-cyan-500/20 transition"
+          >
+            Download Resume
+          </a>
+        </motion.div>
       </div>
 
       <motion.div
