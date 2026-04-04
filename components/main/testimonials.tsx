@@ -16,10 +16,6 @@ export const Testimonials = () => {
     setCurrentIndex((prev) => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
   };
 
-  if (TESTIMONIALS.length === 0) {
-    return null;
-  }
-
   const currentTestimonial = TESTIMONIALS[currentIndex];
 
   return (

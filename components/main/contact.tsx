@@ -24,13 +24,28 @@ export const Contact = () => {
     e.preventDefault();
     setStatus("sending");
 
-    // Simulate form submission (replace with actual API call)
-    setTimeout(() => {
-      console.log("Form submitted:", formData);
-      setStatus("success");
-      setFormData({ name: "", email: "", subject: "", message: "" });
+    try {
+      const response = await fetch("/__forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams({
+          "form-name": "contact",
+          ...formData,
+        }).toString(),
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+        setTimeout(() => setStatus("idle"), 3000);
+      } else {
+        setStatus("error");
+        setTimeout(() => setStatus("idle"), 3000);
+      }
+    } catch {
+      setStatus("error");
       setTimeout(() => setStatus("idle"), 3000);
-    }, 1000);
+    }
   };
 
   return (
@@ -72,7 +87,7 @@ export const Contact = () => {
               <div>
                 <h3 className="text-white font-semibold">Email</h3>
                 <a
-                  href="mailto:189518047+rudraksha127@users.noreply.github.com"
+                  href="mailto:rudraksha127@gmail.com"
                   className="text-gray-400 hover:text-purple-400 transition"
                 >
                   rudraksha127@gmail.com
@@ -117,7 +132,13 @@ export const Contact = () => {
           viewport={{ once: true }}
           variants={slideInFromRight(0.5)}
         >
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" onSubmit={handleSubmit} className="space-y-6">
+            <input type="hidden" name="form-name" value="contact" />
+            <p style={{ display: "none" }}>
+              <label>
+                Don&apos;t fill this out: <input name="bot-field" />
+              </label>
+            </p>
             <div>
               <label htmlFor="name" className="block text-white font-semibold mb-2">
                 Name *

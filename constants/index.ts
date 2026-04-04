@@ -564,7 +564,7 @@ export const FOOTER_DATA = [
       {
         name: "Contact Me",
         icon: null,
-        link: "mailto:189518047+rudraksha127@users.noreply.github.com",
+        link: "mailto:rudraksha127@gmail.com",
       },
     ],
   },
