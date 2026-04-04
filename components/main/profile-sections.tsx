@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { FiEdit2 } from "react-icons/fi";
 
 import { PROFILE_SECTIONS } from "@/constants";
@@ -22,6 +22,10 @@ export const ProfileSections = () => {
   const [activeFilter, setActiveFilter] = useState<string>(
     activeSection.filters[0]
   );
+
+  useEffect(() => {
+    setActiveFilter(activeSection.filters[0]);
+  }, [activeSectionId, activeSection.filters]);
 
   const filteredItems = useMemo(
     () =>
@@ -44,7 +48,6 @@ export const ProfileSections = () => {
                   key={section.id}
                   onClick={() => {
                     setActiveSectionId(section.id);
-                    setActiveFilter(section.filters[0]);
                   }}
                   className={`rounded-full px-4 py-1.5 text-sm font-medium transition ${
                     isActive
@@ -92,7 +95,7 @@ export const ProfileSections = () => {
               const itemData = item as ProfileItem;
               return (
               <article
-                key={item.title}
+                key={`${activeSection.id}-${item.title}-${item.group}-${itemData.evidence ?? "no-evidence"}`}
                 className="py-5 flex items-start justify-between gap-3"
               >
                 <div className="min-w-0">
@@ -112,7 +115,10 @@ export const ProfileSections = () => {
                     </div>
                   )}
                 </div>
-                <FiEdit2 className="h-6 w-6 text-gray-300 shrink-0 mt-1" />
+                <FiEdit2
+                  className="h-6 w-6 text-gray-300 shrink-0 mt-1"
+                  aria-hidden="true"
+                />
               </article>
               );
             })}
