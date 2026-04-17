@@ -124,9 +124,14 @@ export const AwsCloudPanel = () => {
         {/* Header */}
         <div className="flex flex-col md:flex-row items-center justify-between mb-12 gap-6">
           <motion.div variants={slideInFromLeft(0.3)}>
-            <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">
+            <div className="flex items-center gap-2 mb-3">
+              <span className="w-8 h-[1px] bg-gradient-to-r from-orange-500/80 to-transparent" />
+              <span className="section-tag">cloud aws</span>
+            </div>
+            <h1 className="text-4xl md:text-[44px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 via-amber-400 to-yellow-400 leading-tight">
               Cloud AWS Engineering
             </h1>
+            <div className="h-[3px] w-14 rounded-full bg-gradient-to-r from-orange-500 to-yellow-500 mt-3 mb-2" />
             <p className="text-gray-400 mt-2 max-w-xl">
               Live data pipeline architecture — the same pattern used in my AWS
               DEA-C01 certified projects.

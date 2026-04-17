@@ -1,3 +1,8 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { SectionHeader } from "@/components/sub/section-header";
+import { staggerContainer, staggerItem } from "@/lib/motion";
 import { EDUCATION } from "@/constants";
 
 export const Education = () => {
@@ -6,41 +11,68 @@ export const Education = () => {
       id="education"
       className="flex flex-col items-center justify-center py-20 px-6 md:px-10"
     >
-      <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500 py-10">
-        Education
-      </h1>
+      <SectionHeader tag="education" title="Education" />
 
-      <div className="w-full max-w-5xl flex flex-col gap-6">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={staggerContainer}
+        className="w-full max-w-5xl flex flex-col gap-5"
+      >
         {EDUCATION.map((item) => (
-          <article
+          <motion.article
             key={`${item.institute}-${item.level}`}
-            className="border border-[#2A0E61] rounded-xl bg-[#0a0616]/80 p-5 md:p-6"
+            variants={staggerItem}
+            className="glass holo-card rounded-2xl border border-[#2A0E61]/60 p-6 md:p-7"
           >
-            <h2 className="text-xl md:text-2xl font-semibold text-white">
-              {item.institute}
-            </h2>
-            <p className="text-gray-300 mt-1">{item.level}</p>
-            <p className="text-gray-400">{item.duration}</p>
-            <p className="text-gray-300 mt-3">
-              <span className="font-semibold text-white">Grade:</span>{" "}
-              {item.grade}
-            </p>
-            <div className="mt-3">
-              <p className="font-semibold text-white">Activities and societies:</p>
-              <ul className="list-disc ml-5 mt-1 text-gray-300 space-y-1">
-                {item.activities.map((activity) => (
-                  <li key={activity}>{activity}</li>
-                ))}
-              </ul>
+            <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-3 mb-4">
+              <div>
+                <h2 className="text-xl md:text-2xl font-bold text-white leading-snug">
+                  {item.institute}
+                </h2>
+                <p className="text-cyan-400 font-semibold mt-1">{item.level}</p>
+              </div>
+              <div className="flex flex-col items-start md:items-end gap-1 shrink-0">
+                <span className="text-xs font-semibold text-purple-400 bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/20">
+                  {item.duration}
+                </span>
+                <span className="text-xs text-gray-400">
+                  Grade: <span className="text-white font-semibold">{item.grade}</span>
+                </span>
+              </div>
             </div>
-            <p className="text-gray-300 mt-3">{item.summary}</p>
-            <p className="text-gray-300 mt-3">
-              <span className="font-semibold text-white">Skills:</span>{" "}
-              {item.skills.join(", ")}
-            </p>
-          </article>
+
+            <p className="text-gray-300 text-sm leading-relaxed mb-4">{item.summary}</p>
+
+            <div className="pt-3 border-t border-white/5 space-y-3">
+              <div>
+                <p className="text-white font-semibold text-sm mb-2">Activities &amp; Societies:</p>
+                <ul className="flex flex-col gap-1">
+                  {item.activities.map((activity) => (
+                    <li key={activity} className="flex items-start gap-2 text-gray-400 text-sm">
+                      <span className="text-purple-400 mt-0.5 shrink-0">▸</span>
+                      {activity}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="flex flex-wrap gap-1.5 pt-2">
+                {item.skills.map((skill) => (
+                  <span
+                    key={skill}
+                    className="px-2 py-0.5 text-[10px] font-semibold bg-cyan-500/12 text-cyan-300 rounded-full border border-cyan-500/22"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </motion.article>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 };
+

@@ -266,9 +266,14 @@ export const DsaVisualizer = () => {
       >
         {/* Header */}
         <motion.div variants={slideInFromLeft(0.3)} className="mb-10">
-          <h1 className="text-[40px] font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-pink-400">
+          <div className="flex items-center gap-2 mb-3">
+            <span className="w-8 h-[1px] bg-gradient-to-r from-pink-500/80 to-transparent" />
+            <span className="section-tag">algorithms</span>
+          </div>
+          <h1 className="text-4xl md:text-[44px] font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-400 via-fuchsia-400 to-purple-400 leading-tight">
             Algorithm Visualizer
           </h1>
+          <div className="h-[3px] w-14 rounded-full bg-gradient-to-r from-pink-500 to-purple-500 mt-3 mb-2" />
           <p className="text-gray-400 mt-2">
             Watch sorting algorithms animate step-by-step. Select an algorithm, generate an array, and hit Play.
           </p>
