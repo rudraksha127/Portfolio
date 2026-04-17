@@ -95,7 +95,10 @@ export const About = () => {
           variants={slideInFromLeft(0.7)}
           className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6"
         >
-          <div className="p-6 border border-[#2A0E61] rounded-lg bg-[#0a0616]/60 text-center">
+          <div
+            className="p-6 border border-[#2A0E61] rounded-lg bg-[#0a0616]/60 text-center"
+            aria-label="AWS Certified Data Engineer Associate DEA-C01"
+          >
             <h3 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-yellow-400">
               DEA-C01
             </h3>

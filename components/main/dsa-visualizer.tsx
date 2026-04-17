@@ -243,8 +243,7 @@ export const DsaVisualizer = () => {
       clearInterval(intervalRef.current);
       setIsPlaying(false);
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [speedIdx]);
+  }, [isPlaying, speedIdx]);
 
   useEffect(() => {
     return () => {

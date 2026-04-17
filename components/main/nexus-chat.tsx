@@ -159,6 +159,8 @@ function Waveform({ active }: { active: boolean }) {
 function TypewriterText({ text, onDone }: { text: string; onDone: () => void }) {
   const [displayed, setDisplayed] = useState("");
   const indexRef = useRef(0);
+  const onDoneRef = useRef(onDone);
+  onDoneRef.current = onDone;
 
   useEffect(() => {
     setDisplayed("");
@@ -169,11 +171,10 @@ function TypewriterText({ text, onDone }: { text: string; onDone: () => void }) 
         indexRef.current++;
       } else {
         clearInterval(interval);
-        onDone();
+        onDoneRef.current();
       }
     }, 14);
     return () => clearInterval(interval);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [text]);
 
   return <span>{displayed}</span>;
