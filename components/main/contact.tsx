@@ -12,6 +12,7 @@ export const Contact = () => {
     message: "",
   });
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
@@ -24,13 +25,28 @@ export const Contact = () => {
     e.preventDefault();
     setStatus("sending");
 
-    // Simulate form submission (replace with actual API call)
-    setTimeout(() => {
-      console.log("Form submitted:", formData);
-      setStatus("success");
-      setFormData({ name: "", email: "", subject: "", message: "" });
-      setTimeout(() => setStatus("idle"), 3000);
-    }, 1000);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+      const data = (await res.json()) as { success: boolean; message: string };
+
+      if (data.success) {
+        setStatus("success");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+        setTimeout(() => setStatus("idle"), 5000);
+      } else {
+        setErrorMessage(data.message ?? "Something went wrong.");
+        setStatus("error");
+        setTimeout(() => setStatus("idle"), 5000);
+      }
+    } catch {
+      setErrorMessage("Network error. Please try emailing me directly.");
+      setStatus("error");
+      setTimeout(() => setStatus("idle"), 5000);
+    }
   };
 
   return (
@@ -188,14 +204,23 @@ export const Contact = () => {
               className="w-full py-3 button-primary text-white font-semibold rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {status === "sending" && "Sending..."}
-              {status === "success" && "✓ Message Sent!"}
-              {status === "error" && "✗ Failed to send"}
+              {status === "success" && "✓ Sent!"}
+              {status === "error" && "Try Again"}
               {status === "idle" && "Send Message"}
             </button>
 
             {status === "success" && (
               <p className="text-green-400 text-center">
-                Thank you! I&apos;ll get back to you soon.
+                ✓ Thanks for reaching out! I&apos;ll get back to you within 24–48 hours.
+              </p>
+            )}
+            {status === "error" && (
+              <p className="text-red-400 text-center text-sm">
+                {errorMessage}{" "}
+                <a href="mailto:rudraksha127@gmail.com" className="underline hover:text-red-300">
+                  Email me directly
+                </a>
+                .
               </p>
             )}
           </form>

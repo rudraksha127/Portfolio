@@ -463,6 +463,7 @@ export const PROJECTS = [
       "End-to-end cloud data engineering pipeline on AWS: S3 data lake → Glue ETL jobs → Redshift warehouse → QuickSight dashboards. Automated with Lambda triggers and monitored via CloudWatch.",
     image: "/projects/project-1.png",
     link: "https://github.com/rudraksha127",
+    tags: ["AWS", "TypeScript"],
   },
   {
     title: "AI-Powered Task Manager",
@@ -470,6 +471,7 @@ export const PROJECTS = [
       "Full-stack MERN application with an integrated AI assistant that auto-prioritises tasks using NLP, suggests deadlines, and generates daily summaries. Built with React, Node.js, MongoDB, and OpenAI API.",
     image: "/projects/project-2.png",
     link: "https://github.com/rudraksha127",
+    tags: ["MERN", "AI/ML", "Node"],
   },
   {
     title: "DSA Visualizer Platform",
@@ -477,6 +479,7 @@ export const PROJECTS = [
       "Interactive algorithm visualisation web app supporting 10+ sorting, graph traversal, and tree algorithms. Each algorithm animates step-by-step with complexity analysis. Built with Next.js and Canvas API.",
     image: "/projects/project-3.png",
     link: "https://github.com/rudraksha127",
+    tags: ["DSA", "Next", "React"],
   },
   {
     title: "Space Portfolio Website",
@@ -484,6 +487,7 @@ export const PROJECTS = [
       "This very portfolio — a modern, interactive showcase featuring a Jarvis-style NEXUS AI assistant, AWS pipeline diagram, live DSA visualiser, 3D star background, and Framer Motion animations. Next.js 16 + React 19.",
     image: "/projects/project-1.png",
     link: "https://github.com/rudraksha127/Portfolio",
+    tags: ["MERN", "Next", "TypeScript"],
   },
   {
     title: "Full Stack E-Commerce Platform",
@@ -491,6 +495,7 @@ export const PROJECTS = [
       "Complete MERN e-commerce solution with user authentication, product management, shopping cart, Stripe payments, admin dashboard, order tracking, and real-time inventory updates.",
     image: "/projects/project-2.png",
     link: "https://github.com/rudraksha127",
+    tags: ["MERN", "Node", "TypeScript"],
   },
   {
     title: "Real-Time Weather & Analytics App",
@@ -498,6 +503,7 @@ export const PROJECTS = [
       "Weather forecast app with real-time data from multiple APIs, interactive maps, location-based alerts, and a social media analytics dashboard with beautiful charts and metrics visualisation.",
     image: "/projects/project-3.png",
     link: "https://github.com/rudraksha127",
+    tags: ["React", "Next", "AI/ML"],
   },
 ] as const;
 
