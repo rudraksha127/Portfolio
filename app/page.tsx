@@ -1,14 +1,14 @@
 import { About } from "@/components/main/about";
+import { AwsCloudPanel } from "@/components/main/aws-cloud-panel";
 import { Certifications } from "@/components/main/certifications";
 import { Contact } from "@/components/main/contact";
+import { DsaVisualizer } from "@/components/main/dsa-visualizer";
 import { Education } from "@/components/main/education";
-import { Encryption } from "@/components/main/encryption";
 import { Experience } from "@/components/main/experience";
 import { Hero } from "@/components/main/hero";
-import { ProfileSections } from "@/components/main/profile-sections";
+import { NexusChat } from "@/components/main/nexus-chat";
 import { Projects } from "@/components/main/projects";
 import { Skills } from "@/components/main/skills";
-import { Testimonials } from "@/components/main/testimonials";
 
 export default function Home() {
   return (
@@ -16,15 +16,17 @@ export default function Home() {
       <div className="flex flex-col gap-20">
         <Hero />
         <About />
-        <Experience />
-        <Education />
         <Skills />
+        <AwsCloudPanel />
+        <DsaVisualizer />
         <Certifications />
         <Projects />
-        <Testimonials />
-        <Encryption />
+        <Experience />
+        <Education />
         <Contact />
       </div>
+      <NexusChat />
     </main>
   );
 }
+

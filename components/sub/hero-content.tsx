@@ -24,7 +24,7 @@ export const HeroContent = () => {
         >
           <SparklesIcon className="text-[#b49bff] mr-[10px] h-5 w-5" />
           <h1 className="Welcome-text text-[13px]">
-            Fullstack Developer Portfolio
+            AWS Certified · Full Stack MERN · DSA · AI/ML
           </h1>
         </motion.div>
 
@@ -33,11 +33,11 @@ export const HeroContent = () => {
           className="flex flex-col gap-6 mt-6 text-6xl text-bold text-white max-w-[600px] w-auto h-auto"
         >
           <span>
-            Providing{" "}
+            Engineering{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-cyan-500">
-              the best
+              Cloud · Code
             </span>{" "}
-            project experience.
+            & Intelligence.
           </span>
         </motion.div>
 
@@ -45,10 +45,30 @@ export const HeroContent = () => {
           variants={slideInFromLeft(0.8)}
           className="text-lg text-gray-400 my-5 max-w-[600px]"
         >
-          I&apos;m Rudraksh Udiya, a Full Stack Software Engineer with
-          experience in Website, Mobile, and Software development. Check out my
-          projects and skills.
+          I&apos;m Rudraksh Udiya — AWS Certified Data Engineer (DEA-C01),
+          Full Stack MERN Developer, DSA practitioner, and AIML enthusiast.
+          Meet <span className="text-cyan-400 font-semibold">NEXUS</span>, my
+          AI assistant below — ask it anything about my skills or projects.
         </motion.p>
+
+        <motion.div
+          variants={slideInFromLeft(0.9)}
+          className="flex flex-wrap gap-3 mb-2"
+        >
+          {[
+            { label: "☁️ AWS DEA-C01", color: "from-orange-500 to-yellow-400" },
+            { label: "⚛️ MERN Stack", color: "from-cyan-500 to-blue-400" },
+            { label: "🧮 DSA Expert", color: "from-purple-500 to-pink-400" },
+            { label: "🤖 AI/ML", color: "from-green-500 to-teal-400" },
+          ].map(({ label, color }) => (
+            <span
+              key={label}
+              className={`px-3 py-1 rounded-full text-sm font-semibold text-white bg-gradient-to-r ${color} opacity-90`}
+            >
+              {label}
+            </span>
+          ))}
+        </motion.div>
 
         <motion.div
           variants={slideInFromLeft(1)}

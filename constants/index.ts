@@ -69,12 +69,6 @@ export const SKILL_DATA = [
     height: 80,
   },
   {
-    skill_name: "Stripe",
-    image: "stripe.png",
-    width: 80,
-    height: 80,
-  },
-  {
     skill_name: "Node.js",
     image: "node.png",
     width: 80,
@@ -464,44 +458,44 @@ export const EDUCATION = [
 
 export const PROJECTS = [
   {
+    title: "AWS Data Pipeline (DEA-C01)",
+    description:
+      "End-to-end cloud data engineering pipeline on AWS: S3 data lake → Glue ETL jobs → Redshift warehouse → QuickSight dashboards. Automated with Lambda triggers and monitored via CloudWatch.",
+    image: "/projects/project-1.png",
+    link: "https://github.com/rudraksha127",
+  },
+  {
+    title: "AI-Powered Task Manager",
+    description:
+      "Full-stack MERN application with an integrated AI assistant that auto-prioritises tasks using NLP, suggests deadlines, and generates daily summaries. Built with React, Node.js, MongoDB, and OpenAI API.",
+    image: "/projects/project-2.png",
+    link: "https://github.com/rudraksha127",
+  },
+  {
+    title: "DSA Visualizer Platform",
+    description:
+      "Interactive algorithm visualisation web app supporting 10+ sorting, graph traversal, and tree algorithms. Each algorithm animates step-by-step with complexity analysis. Built with Next.js and Canvas API.",
+    image: "/projects/project-3.png",
+    link: "https://github.com/rudraksha127",
+  },
+  {
     title: "Space Portfolio Website",
     description:
-      "A modern, interactive portfolio website featuring stunning 3D animations, space-themed design, and smooth transitions. Built with Next.js 16, React 19, and Framer Motion for an immersive user experience.",
+      "This very portfolio — a modern, interactive showcase featuring a Jarvis-style NEXUS AI assistant, AWS pipeline diagram, live DSA visualiser, 3D star background, and Framer Motion animations. Next.js 16 + React 19.",
     image: "/projects/project-1.png",
     link: "https://github.com/rudraksha127/Portfolio",
   },
   {
     title: "Full Stack E-Commerce Platform",
     description:
-      "Complete e-commerce solution with user authentication, product management, shopping cart, and payment integration. Features include admin dashboard, order tracking, and real-time inventory updates.",
+      "Complete MERN e-commerce solution with user authentication, product management, shopping cart, Stripe payments, admin dashboard, order tracking, and real-time inventory updates.",
     image: "/projects/project-2.png",
     link: "https://github.com/rudraksha127",
   },
   {
-    title: "Task Management Application",
+    title: "Real-Time Weather & Analytics App",
     description:
-      "Collaborative task management tool with drag-and-drop functionality, real-time updates, team collaboration features, and deadline tracking. Built using React, Node.js, and MongoDB.",
-    image: "/projects/project-3.png",
-    link: "https://github.com/rudraksha127",
-  },
-  {
-    title: "Weather Forecast App",
-    description:
-      "Real-time weather application providing accurate forecasts, interactive maps, and location-based weather alerts. Integrates with multiple weather APIs for comprehensive data coverage.",
-    image: "/projects/project-1.png",
-    link: "https://github.com/rudraksha127",
-  },
-  {
-    title: "Social Media Dashboard",
-    description:
-      "Analytics dashboard for social media management with data visualization, post scheduling, engagement tracking, and multi-platform support. Features beautiful charts and real-time metrics.",
-    image: "/projects/project-2.png",
-    link: "https://github.com/rudraksha127",
-  },
-  {
-    title: "Blog Platform with CMS",
-    description:
-      "Full-featured blogging platform with markdown support, SEO optimization, comment system, and custom CMS. Includes author profiles, categories, tags, and search functionality.",
+      "Weather forecast app with real-time data from multiple APIs, interactive maps, location-based alerts, and a social media analytics dashboard with beautiful charts and metrics visualisation.",
     image: "/projects/project-3.png",
     link: "https://github.com/rudraksha127",
   },
@@ -576,12 +570,16 @@ export const NAV_LINKS = [
     link: "#about-me",
   },
   {
-    title: "Experience",
-    link: "#experience",
-  },
-  {
     title: "Skills",
     link: "#skills",
+  },
+  {
+    title: "Cloud AWS",
+    link: "#cloud-aws",
+  },
+  {
+    title: "Algorithms",
+    link: "#dsa-visualizer",
   },
   {
     title: "Projects",
@@ -639,14 +637,47 @@ export const EXPERIENCE = [
 
 export const CERTIFICATIONS = [
   {
-    title: "Full Stack Web Development",
-    issuer: "Self-Taught",
+    title: "AWS Certified Data Engineer – Associate (DEA-C01)",
+    issuer: "Amazon Web Services",
+    date: "2025",
+    description:
+      "Validates expertise in designing, building, and maintaining AWS data pipelines. Covers S3, Glue, Redshift, Athena, Lambda, Kinesis, and QuickSight.",
+    icon: "☁️",
+    verified: true,
+    skills: ["AWS S3", "AWS Glue", "Redshift", "Athena", "Lambda", "Kinesis"],
+    credentialUrl: "",
+  },
+  {
+    title: "Full Stack Web Development (MERN)",
+    issuer: "Self-Taught / Project-Based",
     date: "2024",
     description:
-      "Comprehensive learning of full-stack web development including frontend, backend, and database technologies.",
+      "Comprehensive MERN stack development — React 19, Next.js 16, Node.js, MongoDB, TypeScript, and Tailwind CSS.",
     icon: "🎓",
     verified: true,
-    skills: ["React", "Node.js", "MongoDB", "TypeScript"],
+    skills: ["React", "Next.js", "Node.js", "MongoDB", "TypeScript"],
+    credentialUrl: "",
+  },
+  {
+    title: "Data Structures & Algorithms",
+    issuer: "Self-Taught / Competitive Programming",
+    date: "2024",
+    description:
+      "Proficient in arrays, trees, graphs, dynamic programming, binary search, and advanced algorithms. Active on LeetCode and Codeforces.",
+    icon: "💻",
+    verified: true,
+    skills: ["DSA", "Graphs", "Dynamic Programming", "Binary Search"],
+    credentialUrl: "",
+  },
+  {
+    title: "AI/ML Fundamentals & Applications",
+    issuer: "Self-Taught / Project-Based",
+    date: "2025",
+    description:
+      "Applied machine learning, NLP, and LLM prompt engineering. Built AI-powered features including intelligent chat assistants and recommendation systems.",
+    icon: "🤖",
+    verified: true,
+    skills: ["Machine Learning", "NLP", "LLMs", "Prompt Engineering"],
     credentialUrl: "",
   },
   {
@@ -658,17 +689,6 @@ export const CERTIFICATIONS = [
     icon: "🏅",
     verified: true,
     skills: ["Leadership", "Teamwork", "Discipline"],
-    credentialUrl: "",
-  },
-  {
-    title: "Data Structures & Algorithms",
-    issuer: "Self-Taught",
-    date: "2024",
-    description:
-      "Ongoing practice and learning of data structures and algorithms through problem-solving platforms.",
-    icon: "💻",
-    verified: true,
-    skills: ["DSA", "Problem Solving", "Algorithms"],
     credentialUrl: "",
   },
 ] as const;
